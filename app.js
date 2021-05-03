@@ -71,11 +71,3 @@ clearBtn.addEventListener('click', (e) => {
     noteTextarea.value = "";
     noteSelect.value = 'default';
 });
-
-// Event listener for delete button on notes
-function removeNote(e){
-    let deleteBtn = e.target;
-    if (deleteBtn.classList[0] === 'note'){
-        console.log('click');
-    }
-}
