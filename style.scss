@@ -123,6 +123,14 @@ body {
         margin: 0;
     }
     .notes {
+        @keyframes note-animation {
+            from {transform: translateX(-100%);}
+            to {transform: translateX(0);}
+        }
+        @keyframes note-remove {
+            from {transform: translateX(0);}
+            to {transform: translateX(-100%);}
+        }
         .note {
             display: flex;
             align-items: center;
@@ -131,6 +139,8 @@ body {
             border-top: 1px solid black;
             border-bottom: 1px solid black;
             padding: 20px 20px;
+            animation-name: note-animation;
+            animation-duration: 500ms;
             .note-info {
                 width: 75%;
                 h2 {

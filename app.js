@@ -51,7 +51,10 @@ noteForm.addEventListener('submit', (e) => {
     deleteNote.classList.add('delete-btn');
     deleteNote.textContent = 'X';
     deleteNote.addEventListener('click', () => {
-        note.remove();
+        note.style.animationName = 'note-remove';
+        setTimeout(function(){
+            note.remove();
+        }, 450);
     })
     note.append(deleteNote);
 
