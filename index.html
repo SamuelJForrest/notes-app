@@ -13,25 +13,32 @@
     <h1>Sam's Notes</h1>
     <hr/>
     <div class="note-input">
-        <form action="/">
-            <input type="text" placeholder="Title">
+        <form action="/" id="note-form">
+            <input type="text" placeholder="Title" id="note-title-input" autocomplete="off">
             <textarea name="note-text" id="note-text" cols="30" rows="10" placeholder="Note"></textarea>
             <br>
             <select name="Options" id="note-tag">
-                <option value="general">General</option>
-                <option value="general">Work</option>
-                <option value="general">Side-hustle</option>
+                <option value="default">Priority</option>
+                <option value="high">High</option>
+                <option value="mid">Mid</option>
+                <option value="low">Low</option>
             </select>
-            <button>Submit</button>
-            <button>Clear</button>
+            <button id="submit-btn" type="submit">Submit</button>
+            <button id="clear-btn">Clear</button>
         </form>
+        <!-- <div class="warning">
+            <p>Please enter valid text.</p>
+        </div> -->
     </div>
     <hr/>
     <div class="notes">
-        <div class="note">
-            <p>Here is an example note with a lot more text than it needs, just to test out what it will look like. </p>
-            <img src="./img/remove.png" alt="">
-        </div>
+        <!-- <div class="note">
+            <div class="note-info">
+                <h2>Example Title</h2>
+                <p>Here is an example note with a lot more text than it needs, just to test out what it will look like. </p>
+            </div>
+            <button class="delete-btn">X</button>
+        </div> -->
     </div>
 
     <script src="app.js"></script>

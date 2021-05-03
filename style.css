@@ -114,8 +114,29 @@ body form button:hover {
 }
 
 body form select {
+  width: 35%;
   font-family: inherit;
   font-size: 1.2em;
+}
+
+body .warning {
+  background-color: #fa5e5e;
+  color: white;
+  height: 5vh;
+  width: 90%;
+  margin: 2% auto 5% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 2px 2px #e44848;
+          box-shadow: 0 0 2px 2px #e44848;
 }
 
 body .notes .note {
@@ -128,21 +149,55 @@ body .notes .note {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   min-height: 100px;
-  background-color: lightblue;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   margin: 2% 0;
-  padding: 20px 0;
+  padding: 20px 20px;
 }
 
-body .notes .note p {
-  width: 60%;
+body .notes .note .note-info {
+  width: 75%;
 }
 
-body .notes .note img {
-  width: 7.5%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+body .notes .note .note-info h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.25em;
+  margin-bottom: 5%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+body .notes .note .note-info p {
+  width: 100%;
+}
+
+body .notes .note .delete-btn {
+  background-color: #fa5e5e;
+  color: white;
+  font-size: 1.5em;
+  font-family: inherit;
+  border: none;
+  border-radius: 7.5px;
+}
+
+body .notes .note .delete-btn:hover {
+  cursor: pointer;
+  background-color: #e44848;
+}
+
+body .red {
+  background-color: lightcoral;
+}
+
+body .amber {
+  background-color: lightyellow;
+}
+
+body .green {
+  background-color: lightgreen;
 }
 /*# sourceMappingURL=style.css.map */
