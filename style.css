@@ -51,7 +51,7 @@ table {
 body {
   font-family: 'Montserrat', sans-serif;
   width: 100%;
-  background-color: #adb5bd;
+  background-color: #c8bebb;
 }
 
 body h1 {
@@ -101,7 +101,10 @@ body form #note-text {
 
 body form button {
   font-family: inherit;
+  background-color: #169246;
+  color: white;
   font-size: 1.2em;
+  text-transform: uppercase;
   margin-bottom: 2%;
   border-radius: 5px;
   border: 1px solid black;
@@ -110,13 +113,35 @@ body form button {
 }
 
 body form button:hover {
-  background-color: #5c5c5c;
+  background-color: #07702f;
 }
 
 body form select {
   width: 35%;
   font-family: inherit;
   font-size: 1.2em;
+}
+
+@-webkit-keyframes warning-animation {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes warning-animation {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 body .warning {
@@ -137,6 +162,14 @@ body .warning {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 2px 2px #e44848;
           box-shadow: 0 0 2px 2px #e44848;
+  -webkit-animation-name: warning-animation;
+          animation-name: warning-animation;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+}
+
+body hr {
+  margin: 0;
 }
 
 body .notes .note {
@@ -151,7 +184,6 @@ body .notes .note {
   min-height: 100px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  margin: 2% 0;
   padding: 20px 20px;
 }
 
@@ -187,6 +219,10 @@ body .notes .note .delete-btn {
 body .notes .note .delete-btn:hover {
   cursor: pointer;
   background-color: #e44848;
+}
+
+body .notes .note:nth-of-type(1) {
+  margin: 5% 0 3px 0;
 }
 
 body .red {

@@ -47,7 +47,7 @@ table {
 body {
     font-family: 'Montserrat', sans-serif;
     width: 100%;
-    background-color: #adb5bd;
+    background-color: #c8bebb;
     h1 {
         display: flex;
         justify-content: center;
@@ -83,20 +83,27 @@ body {
         }
         button {
             font-family: inherit;
+            background-color: #169246;
+            color: white;
             font-size: 1.2em;
+            text-transform: uppercase;
             margin-bottom: 2%;
             border-radius: 5px;
             border: 1px solid black;
             transition: background-color 300ms ease;
         }
         button:hover {
-            background-color: rgb(92, 92, 92);
+            background-color: #07702f;
         }
         select {
             width: 35%;
             font-family: inherit;
             font-size: 1.2em;
         }
+    }
+    @keyframes warning-animation {
+        from {transform: scale(0);}
+        to {transform: scale(1);}
     }
     .warning {
         background-color: #fa5e5e;
@@ -109,6 +116,11 @@ body {
         align-items: center;
         border-radius: 5px;
         box-shadow: 0 0 2px 2px #e44848;
+        animation-name: warning-animation;
+        animation-duration: 500ms;
+    }
+    hr {
+        margin: 0;
     }
     .notes {
         .note {
@@ -118,7 +130,6 @@ body {
             min-height: 100px;
             border-top: 1px solid black;
             border-bottom: 1px solid black;
-            margin: 2% 0;
             padding: 20px 20px;
             .note-info {
                 width: 75%;
@@ -147,6 +158,9 @@ body {
                 cursor: pointer;
                 background-color: #e44848;
             }
+        }
+        .note:nth-of-type(1) {
+            margin: 5% 0 3px 0;
         }
     }
     .red {

@@ -18,14 +18,20 @@ noteForm.addEventListener('submit', (e) => {
         warning.classList.add('warning');
         warning.textContent = 'Please enter valid text.';
         noteInputArea.append(warning);
+        noteForm.addEventListener('click', () => {
+            warning.remove();
+        });
     } else if (noteSelect.value === 'default') {
         e.preventDefault();
         let selectWarning = document.createElement('div');
         selectWarning.classList.add('warning');
         selectWarning.textContent = 'Please select a priority';
         noteInputArea.append(selectWarning);
+        noteForm.addEventListener('click', () => {
+            selectWarning.remove();
+        });
     } else {
-        e.preventDefault();
+    e.preventDefault();
     let note = document.createElement('div');
     note.classList.add('note');
     notesFeed.append(note);
@@ -60,14 +66,5 @@ noteForm.addEventListener('submit', (e) => {
     }
     noteTitleInput.value = '';
     noteTextarea.value = '';
-    noteSelect.value = 'default';
-});
-
-// Event listener for clear button - removes all text content from inputs and resets select
-
-clearBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    noteTitleInput.value = "";
-    noteTextarea.value = "";
     noteSelect.value = 'default';
 });
