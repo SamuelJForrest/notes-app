@@ -51,7 +51,7 @@ table {
 body {
   font-family: 'Montserrat', sans-serif;
   width: 100%;
-  background-color: #c8bebb;
+  background-color: #4c5455;
 }
 
 body h1 {
@@ -174,8 +174,8 @@ body hr {
 
 @-webkit-keyframes note-animation {
   from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
   }
   to {
     -webkit-transform: translateX(0);
@@ -185,8 +185,8 @@ body hr {
 
 @keyframes note-animation {
   from {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
   }
   to {
     -webkit-transform: translateX(0);
@@ -200,8 +200,8 @@ body hr {
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
   }
 }
 
@@ -211,8 +211,8 @@ body hr {
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
   }
 }
 
@@ -229,6 +229,7 @@ body .notes .note {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 20px 20px;
+  margin: 3% 0 0 0;
   -webkit-animation-name: note-animation;
           animation-name: note-animation;
   -webkit-animation-duration: 500ms;
@@ -269,10 +270,6 @@ body .notes .note .delete-btn:hover {
   background-color: #e44848;
 }
 
-body .notes .note:nth-of-type(1) {
-  margin: 5% 0 3px 0;
-}
-
 body .red {
   background-color: lightcoral;
 }
@@ -283,5 +280,221 @@ body .amber {
 
 body .green {
   background-color: lightgreen;
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background-color: #4c5455;
+  }
+  body h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 7.5vh;
+    color: white;
+    font-size: 4em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  body hr {
+    margin: 0;
+  }
+  body form {
+    text-align: center;
+  }
+  body form input[type=text] {
+    margin-top: 2%;
+    font-size: 1.5em;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-family: inherit;
+  }
+  body form #note-text {
+    font-family: inherit;
+    resize: none;
+    font-size: 1.3em;
+    width: 50%;
+    height: 150px;
+    margin: 1% 0;
+    border-radius: 5px;
+  }
+  body form button {
+    display: block;
+    margin: 1% auto;
+    font-family: inherit;
+    background-color: #169246;
+    color: white;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid black;
+    -webkit-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
+  }
+  body form button:hover {
+    background-color: #07702f;
+    cursor: pointer;
+  }
+  body form select {
+    width: 35%;
+    font-family: inherit;
+    font-size: 1.2em;
+  }
+  @-webkit-keyframes warning-animation {
+    from {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes warning-animation {
+    from {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  body .warning {
+    background-color: #fa5e5e;
+    color: white;
+    height: 5vh;
+    width: 50%;
+    margin: 1% auto 5% auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px 2px #e44848;
+            box-shadow: 0 0 2px 2px #e44848;
+    -webkit-animation-name: warning-animation;
+            animation-name: warning-animation;
+    -webkit-animation-duration: 500ms;
+            animation-duration: 500ms;
+  }
+  body hr {
+    margin: 0;
+  }
+  body .notes {
+    width: 100%;
+  }
+  @-webkit-keyframes note-animation {
+    from {
+      -webkit-transform: translateX(-220%);
+              transform: translateX(-220%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes note-animation {
+    from {
+      -webkit-transform: translateX(-220%);
+              transform: translateX(-220%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes note-remove {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-220%);
+              transform: translateX(-220%);
+    }
+  }
+  @keyframes note-remove {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(-220%);
+              transform: translateX(-220%);
+    }
+  }
+  body .notes .note {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    min-height: 150px;
+    width: 30%;
+    border: 1px solid black;
+    padding: 20px 20px;
+    margin: 2% auto;
+    -webkit-animation-name: note-animation;
+            animation-name: note-animation;
+    -webkit-animation-duration: 500ms;
+            animation-duration: 500ms;
+  }
+  body .notes .note .note-info {
+    width: 75%;
+  }
+  body .notes .note .note-info h2 {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.25em;
+    margin-bottom: 5%;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  body .notes .note .note-info p {
+    width: 100%;
+  }
+  body .notes .note .delete-btn {
+    background-color: #fa5e5e;
+    color: white;
+    font-size: 1.5em;
+    font-family: inherit;
+    border: none;
+    border-radius: 7.5px;
+  }
+  body .notes .note .delete-btn:hover {
+    cursor: pointer;
+    background-color: #e44848;
+  }
+  body .red {
+    background-color: lightcoral;
+  }
+  body .amber {
+    background-color: lightyellow;
+  }
+  body .green {
+    background-color: lightgreen;
+  }
 }
 /*# sourceMappingURL=style.css.map */
